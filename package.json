@@ -1,6 +1,7 @@
 {
     "name": "only-test",
     "version": "1.0.0",
+    "homepage": "https://sol-mayers.github.io/only-test/",
     "main": "index.js",
     "license": "MIT",
     "scripts": {
