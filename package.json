@@ -5,7 +5,9 @@
     "license": "MIT",
     "scripts": {
         "build": "webpack",
-        "start": "webpack-dev-server"
+        "start": "webpack-dev-server",
+        "predeploy": "yarn build",
+        "deploy": "gh-pages -d build"
     },
     "devDependencies": {
         "@babel/core": "^7.25.2",
@@ -24,6 +26,7 @@
     "dependencies": {
         "@types/uuid": "^10.0.0",
         "css-loader": "^7.1.2",
+        "gh-pages": "^6.1.1",
         "gsap": "^3.12.5",
         "mini-css-extract-plugin": "^2.9.1",
         "react": "^18.3.1",
