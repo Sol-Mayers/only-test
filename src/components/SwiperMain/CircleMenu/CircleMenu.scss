@@ -1,0 +1,117 @@
+@import "../../../globals";
+
+.circle-menu {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    @media (min-width: $desktopSize) {
+        display: block;
+    }
+}
+
+#menu {
+    position: relative;
+    transform: scale(1.6) rotate(85deg);
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    padding: 0;
+    list-style: none;
+    border-radius: 50%;
+    transition: transform 0.7s ease;
+    overflow: hidden;
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 268px;
+        height: 268px;
+        border: 1px solid #42567a;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        opacity: 20%;
+    }
+}
+
+.circle-menu li {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    transform-origin: 100% 100%;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+}
+
+.circle-menu li:nth-child(1) {
+    transform: rotate(0deg) skew(30deg);
+}
+
+.circle-menu li:nth-child(2) {
+    transform: rotate(60deg) skew(30deg);
+}
+
+.circle-menu li:nth-child(3) {
+    transform: rotate(120deg) skew(30deg);
+}
+
+.circle-menu li:nth-child(4) {
+    transform: rotate(180deg) skew(30deg);
+}
+
+.circle-menu li:nth-child(5) {
+    transform: rotate(240deg) skew(30deg);
+}
+
+.circle-menu li:nth-child(6) {
+    transform: rotate(300deg) skew(30deg);
+}
+
+.circle-menu li div {
+    display: block;
+    cursor: pointer;
+    width: 160px;
+    height: 160px;
+    transform: skew(-30deg) rotate(-60deg);
+    margin: 40px 0 0 40px;
+    transition: background-color 0.5s;
+}
+
+.circle {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #42567a;
+    color: #42567a;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+    top: 10px;
+    left: 50%;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    text-align: center;
+    transform: scale(0.3);
+    pointer-events: none;
+}
+
+.circle-menu li div:hover .circle {
+    transform: scale(1);
+    background-color: #f4f5f9;
+    box-shadow: 0px 0px 0px 0.5px #42567a;
+}
+.circle-menu li div {
+    position: relative;
+}
+.active-item {
+    transform: scale(1);
+    background-color: #f4f5f9;
+    box-shadow: 0px 0px 0px 0.5px #42567a;
+}

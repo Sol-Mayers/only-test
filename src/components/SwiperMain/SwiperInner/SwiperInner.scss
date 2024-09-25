@@ -1,0 +1,62 @@
+@import "../../../globals";
+
+.slide-content-wrapper .mySwiper2 {
+    margin-bottom: 0;
+}
+
+.slide-content-inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: scroll;
+    width: auto;
+}
+
+.slide-content-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.swiper-slide:first-child .slide-content-description {
+    @media (min-width: $desktopSize) {
+        padding-left: 80px;
+    }
+}
+
+.swiper-slide:last-child .slide-content-description {
+    @media (min-width: $desktopSize) {
+        padding-right: 80px;
+    }
+}
+
+.slide-content-text {
+    font-size: 14px;
+    text-align: start;
+    color: #42567a;
+    @media (min-width: $tabletSize) {
+        font-size: 16px;
+    }
+    @media (min-width: $desktopSize) {
+        font-size: 20px;
+    }
+}
+
+.slide-content-date {
+    font-family: "Bebas Neue", sans-serif;
+    color: #3877ee;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    @media (min-width: $tabletSize) {
+        font-size: 20px;
+    }
+    @media (min-width: $desktopSize) {
+        font-size: 25px;
+    }
+}

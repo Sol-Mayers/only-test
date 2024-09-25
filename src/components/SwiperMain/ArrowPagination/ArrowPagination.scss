@@ -1,0 +1,57 @@
+@import "../../../globals";
+
+.arrow-pagination {
+    padding: 0 20px 0 20px;
+    order: 4;
+    @media (min-width: $desktopSize) {
+        padding: 0 80px 0 80px;
+        order: 3;
+    }
+}
+
+.arrow-pagination-label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    @media (min-width: $desktopSize) {
+        margin-bottom: 14px;
+    }
+}
+
+.nav-button {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: 1px solid#42567a80;
+    outline: none;
+    cursor: pointer;
+    &:not(:disabled) {
+        background-color: #ffffff;
+    }
+    @media (min-width: $tabletSize) {
+        width: 35px;
+        height: 35px;
+    }
+    @media (min-width: $desktopSize) {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.nav-prev {
+    margin-right: 8px;
+    @media (min-width: $desktopSize) {
+        margin-right: 20px;
+    }
+}
+
+.nav-next {
+    transform: rotate(180deg);
+}
+
+.nav-prev,
+.nav-next {
+    background-image: url("../../../../public/images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: center;
+}

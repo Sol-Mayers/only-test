@@ -1,0 +1,115 @@
+@import "../../globals";
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 78px;
+    order: 3;
+    @media (min-width: $desktopSize) {
+        margin-bottom: 0px;
+        order: 4;
+    }
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f4f5f9;
+    transition-property: opacity;
+}
+.swiper-slide-prev {
+    opacity: 0;
+    transition-property: opacity;
+}
+.swiper-slide-active {
+    opacity: 1;
+    transition-property: opacity;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.pagination-wrapper {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    @media (min-width: $desktopSize) {
+        display: none;
+    }
+}
+
+.pagination-wrapper .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background-color: #42567a;
+}
+
+.slide-content-wrapper {
+    width: 100%;
+}
+
+.date-title-linethrough {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #c7cdd9;
+    top: 125px;
+    left: 0px;
+}
+
+.slide-content-date-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    @media (min-width: $desktopSize) {
+        display: none;
+    }
+}
+
+.slide-content-date-text-title {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #42567a;
+    font-size: 16px;
+    @media (min-width: $tabletSize) {
+        font-size: 18px;
+    }
+    @media (min-width: $desktopSize) {
+        font-size: 20px;
+    }
+}
+
+.circle-text {
+    display: none;
+    color: #42567a;
+    font-weight: 700;
+    size: 20px;
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 440px;
+    text-align: right;
+    @media (min-width: $desktopSize) {
+        display: inline;
+    }
+}
